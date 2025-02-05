@@ -9,10 +9,10 @@ import clsx from "clsx";
 import { ForwardLink } from "@/components/forward-link";
 
 export const categories = [
-  { id: "my-drive", name: "My Drive", icon: IconBasilGoogleDriveOutline },
-  { id: "recent", name: "Recent", icon: IconMdiRecent },
-  { id: "shared", name: "Shared", icon: ShareIcon },
-  { id: "storage", name: "Storage", icon: IconIcOutlineSdStorage },
+  { id: "my-drive", name: "ドライブ", icon: IconBasilGoogleDriveOutline },
+  { id: "recent", name: "最近", icon: IconMdiRecent },
+  { id: "shared", name: "共有", icon: ShareIcon },
+  { id: "storage", name: "ストレージ", icon: IconIcOutlineSdStorage },
 ] as const;
 
 interface SidNavItemProps {

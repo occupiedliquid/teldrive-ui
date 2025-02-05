@@ -30,8 +30,8 @@ export const GeneralTab = memo(() => {
       className={clsx("grid grid-cols-6 gap-8 p-2 pr-4 w-full overflow-y-auto", scrollbarClasses)}
     >
       <div className="col-span-6 xs:col-span-3">
-        <p className="text-lg font-medium">Upload Concurrency</p>
-        <p className="text-sm font-normal text-on-surface-variant">Concurrent Part Uploads</p>
+        <p className="text-lg font-medium">並列アップロード</p>
+        <p className="text-sm font-normal text-on-surface-variant">アップロード時のパート分割数</p>
       </div>
       <Controller
         name="uploadConcurrency"
@@ -49,9 +49,9 @@ export const GeneralTab = memo(() => {
         )}
       />
       <div className="col-span-6 xs:col-span-3">
-        <p className="text-lg font-medium">Resizer Host</p>
+        <p className="text-lg font-medium">リサイズホスト</p>
         <p className="text-sm font-normal text-on-surface-variant">
-          Image Resize Host to resize images
+          サムネイルを表示するためのサーバー
         </p>
       </div>
       <Controller
@@ -73,8 +73,8 @@ export const GeneralTab = memo(() => {
         )}
       />
       <div className="col-span-6 xs:col-span-3">
-        <p className="text-lg font-medium">Page Size</p>
-        <p className="text-sm font-normal text-on-surface-variant">Number of items per page</p>
+        <p className="text-lg font-medium">ページサイズ</p>
+        <p className="text-sm font-normal text-on-surface-variant">ページあたりのファイル量</p>
       </div>
       <Controller
         name="pageSize"
@@ -93,9 +93,9 @@ export const GeneralTab = memo(() => {
       />
 
       <div className="col-span-6 xs:col-span-3">
-        <p className="text-lg font-medium">Split File Size</p>
+        <p className="text-lg font-medium">ファイル分割</p>
         <p className="text-sm font-normal text-on-surface-variant">
-          Split File Size for multipart uploads
+          並列アップロード時の1パートの分割サイズ
         </p>
       </div>
       <Controller
@@ -128,9 +128,9 @@ export const GeneralTab = memo(() => {
         )}
       />
       <div className="col-span-6 xs:col-span-3">
-        <p className="text-lg font-medium">Encrypt Files</p>
+        <p className="text-lg font-medium">ファイルを暗号化</p>
         <p className="text-sm font-normal text-on-surface-variant">
-          Encrypt Files before uploading
+          ファイルを暗号化した後アップロード
         </p>
       </div>
       <div className="col-span-6 xs:col-span-3">
@@ -150,9 +150,9 @@ export const GeneralTab = memo(() => {
       </div>
 
       <div className="col-span-6 xs:col-span-3">
-        <p className="text-lg font-medium">Rclone Media Proxy</p>
+        <p className="text-lg font-medium">Rclone</p>
         <p className="text-sm font-normal text-on-surface-variant">
-          Play Files directly from Rclone Webdav
+         Rcloneのwebdavから直接ファイルを取得
         </p>
       </div>
       <Controller

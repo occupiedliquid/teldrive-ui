@@ -1,9 +1,25 @@
-@font-face {
+/* @font-face {
   font-family: "Rubik";
   font-style: normal;
   font-display: swap;
   font-weight: 100 900;
   src: url("/fonts/rubik.woff2") format("woff2-variations");
+} */
+
+/* @font-face {
+  font-family: "IBMPlexSansJP";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 900;
+  src: url('/fonts/IBMPlexSansJP-Medium.ttf') format('truetype');
+} */
+
+@font-face {
+  font-family: "IBMPlexSansJP";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 900;
+  src: url("/fonts/IBMPlexSansJP-Medium.woff2") format("woff2-variations");
 }
 
 @tailwind base;

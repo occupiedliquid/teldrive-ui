@@ -13,12 +13,12 @@ export const InfoTab = memo(() => {
           target="_blank"
           className="text-md font-normal"
         >
-          <span>Version: </span>
+          <span>バージョン: </span>
           <span className="font-semibold"> {import.meta.env.UI_VERSION} </span>
         </a>
       </span>
       <span className="flex gap-2 flex-col">
-        <p className="text-lg font-medium">Server</p>
+        <p className="text-lg font-medium">サーバー</p>
         {version &&
           Object.entries(version).map(([key, val]) => (
             <p key={key}>

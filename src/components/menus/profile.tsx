@@ -54,14 +54,14 @@ export function ProfileDropDown() {
           params={{ tabId: "general" }}
           endContent={<IconOutlineSettings className="size-6" />}
         >
-          Settings
+          設定
         </DropdownItem>
         <DropdownItem
           key="logout"
           endContent={<IconBaselineLogout className="size-6" />}
           onPress={onSignOut}
         >
-          Logout
+          ログアウト
         </DropdownItem>
       </DropdownMenu>
     </Dropdown>

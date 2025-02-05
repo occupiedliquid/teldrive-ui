@@ -64,7 +64,7 @@ const Session = memo(({ appName, location, createdAt, valid, hash, current }: Us
       <p className="text-sm font-normal">
         Created : {new Date(createdAt).toISOString().split("T")[0]}
       </p>
-      {location && <p className="text-sm font-normal">Location : {location}</p>}
+      {location && <p className="text-sm font-normal">場所 : {location}</p>}
     </div>
   );
 });
@@ -152,16 +152,16 @@ export const AccountTab = memo(() => {
     <div className={clsx("grid grid-cols-6 gap-8 p-2 w-full overflow-y-auto", scrollbarClasses)}>
       <div className="col-span-6 xs:col-span-3 flex flex-col justify-around">
         <div>
-          <p className="text-lg font-medium">Add Bots</p>
+          <p className="text-lg font-medium">Bot</p>
           <p className="text-sm font-normal text-on-surface-variant">
-            Add bots tokens to your account
+            Botをアカウントに追加
           </p>
         </div>
         <div className="col-span-6 xs:col-span-3 flex flex-col gap-2">
-          <p className="text-lg font-medium">{`Current Bots: ${userConfig?.bots.length || 0}`}</p>
+          <p className="text-lg font-medium">{`現在のBot数: ${userConfig?.bots.length || 0}`}</p>
           <div className="inline-flex gap-4">
             <Button
-              title="Copy Tokens to Clipboard"
+              title="トークンをクリップボードにコピー"
               variant="text"
               className="text-inherit"
               onPress={copyTokens}
@@ -172,7 +172,7 @@ export const AccountTab = memo(() => {
 
             <Button
               variant="text"
-              title="Remove Bots"
+              title="ボットを削除"
               className="text-inherit"
               onPress={() => removeBots.mutate({})}
               isLoading={removeBots.isPending}
@@ -196,7 +196,7 @@ export const AccountTab = memo(() => {
                 classNames={{
                   input: "h-32",
                 }}
-                placeholder="Enter tokens 1 per line"
+                placeholder="1行につき1トークンを入力"
                 autoComplete="off"
                 errorMessage={error ? error.message : ""}
                 isInvalid={!!error}
@@ -204,14 +204,14 @@ export const AccountTab = memo(() => {
             )}
           />
           <Button isLoading={botAddition.isPending} type="submit" variant="filledTonal">
-            Add Bots
+            ボットを追加
           </Button>
         </form>
       </div>
       <div className="col-span-6 xs:col-span-3">
-        <p className="text-lg font-medium">Select Channel</p>
+        <p className="text-lg font-medium">チャンネルを選択</p>
         <p className="text-sm font-normal text-on-surface-variant">
-          Select the default telegram channel
+          既定のTelegramチャンネルを設定
         </p>
       </div>
       <div className="col-span-6 xs:col-span-3 flex gap-2">
@@ -239,7 +239,7 @@ export const AccountTab = memo(() => {
         <Button
           isIconOnly
           variant="text"
-          title="Sync Channels"
+          title="チャンネルを同期"
           className={clsx(syncChannels.isPending && "pointer-events-none")}
           onPress={() => syncChannels.mutate({})}
         >
@@ -247,9 +247,9 @@ export const AccountTab = memo(() => {
         </Button>
       </div>
       <div className="col-span-6">
-        <p className="text-lg font-medium">Sessions</p>
+        <p className="text-lg font-medium">セッション</p>
         <p className="text-sm font-normal text-on-surface-variant">
-          Active sessions for your account
+          有効なセッション一覧
         </p>
         <div className="flex pt-2 flex-wrap gap-2">
           {sessions?.map((session) => (

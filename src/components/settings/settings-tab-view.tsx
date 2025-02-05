@@ -12,11 +12,11 @@ export const SettingsTabView = memo(() => {
   const params = fileRoute.useParams();
 
   switch (params.tabId) {
-    case "appearance":
+    case "外観":
       return <ApperanceTab />;
-    case "account":
+    case "アカウント":
       return <AccountTab />;
-    case "general":
+    case "基本設定":
       return <GeneralTab />;
     default:
       return <InfoTab />;

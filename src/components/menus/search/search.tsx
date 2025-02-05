@@ -185,7 +185,7 @@ export const SearchMenu = memo(({ isOpen, setIsOpen, triggerRef }: SearchMenuPro
                 wrapper: "gap-2",
                 label: "text-md text-inherit select-none",
               }}
-              label="Category"
+              label="カテゴリ"
               orientation="horizontal"
               {...field}
             >
@@ -209,8 +209,8 @@ export const SearchMenu = memo(({ isOpen, setIsOpen, triggerRef }: SearchMenuPro
               <Input
                 size="md"
                 labelPlacement="outside"
-                label="Search"
-                placeholder="search query or regex"
+                label="検索"
+                placeholder="テキストか正規表現で検索"
                 autoComplete="off"
                 isClearable
                 onClear={() => field.onChange("")}
@@ -256,7 +256,7 @@ export const SearchMenu = memo(({ isOpen, setIsOpen, triggerRef }: SearchMenuPro
             name="location"
             render={({ field }) => (
               <RadioGroup
-                label="Location"
+                label="フォルダ"
                 classNames={{
                   wrapper: "gap-4",
                   label: "text-md text-inherit select-none",
@@ -288,7 +288,7 @@ export const SearchMenu = memo(({ isOpen, setIsOpen, triggerRef }: SearchMenuPro
                 name={field.name}
                 onBlur={field.onBlur}
               >
-                Deep Search
+                ディープサーチ
               </Checkbox>
             )}
           />
@@ -318,7 +318,7 @@ export const SearchMenu = memo(({ isOpen, setIsOpen, triggerRef }: SearchMenuPro
           name="modifiedDate"
           render={({ field }) => (
             <RadioGroup
-              label="Modified Date"
+              label="ファイル変更日"
               classNames={{
                 wrapper: "grid gap-2 grid-cols-[repeat(auto-fit,minmax(100px,min-content))]",
                 label: "text-md text-inherit select-none",
@@ -386,7 +386,7 @@ export const SearchMenu = memo(({ isOpen, setIsOpen, triggerRef }: SearchMenuPro
       </form>
       <div className="flex gap-2 justify-end w-full pt-2.5 pb-1 px-2.5">
         <Button onPress={() => reset(defaultFilters)} size="sm" variant="text">
-          Reset
+          リセット
         </Button>
         <Button
           form="filter-form"
@@ -395,7 +395,7 @@ export const SearchMenu = memo(({ isOpen, setIsOpen, triggerRef }: SearchMenuPro
           isLoading={isSearching}
           variant="filledTonal"
         >
-          Search
+          検索
         </Button>
       </div>
     </Popover>

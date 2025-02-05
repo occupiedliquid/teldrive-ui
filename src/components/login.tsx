@@ -17,7 +17,7 @@ import { $api } from "@/utils/api";
 
 const getKeys = Object.keys as <T>(object: T) => (keyof T)[];
 
-export const displayNames = new Intl.DisplayNames(["en"], { type: "region" });
+export const displayNames = new Intl.DisplayNames(["ja"], { type: "region" });
 
 function sortISOCodes(countryCodes: CountryCode[]) {
   return [...countryCodes].sort((countryCodeA, countryCodeB) => {
@@ -211,7 +211,7 @@ export const Login = memo(() => {
                   <Input
                     isRequired
                     size="lg"
-                    label="Phone Number"
+                    label="電話番号"
                     labelPlacement="outside"
                     variant="bordered"
                     className="max-w-xs"
@@ -292,7 +292,7 @@ export const Login = memo(() => {
               isLoading={state.isLoading}
               className="max-w-xs text-inherit"
             >
-              {state.isLoading ? "Please Wait…" : state.step === 1 ? "Next" : "Login"}
+              {state.isLoading ? "Please Wait…" : state.step === 1 ? "次へ" : "ログイン"}
             </Button>
           )}
           {state.step !== 3 && (
@@ -307,7 +307,7 @@ export const Login = memo(() => {
               variant="filledTonal"
               className="max-w-xs text-inherit"
             >
-              {state.loginType === "qr" ? "Phone Login" : "QR Login"}
+              {state.loginType === "qr" ? "電話番号でログイン" : "QRログイン"}
             </Button>
           )}
         </div>

@@ -12,19 +12,19 @@ import { motion } from "framer-motion";
 
 const Tabs = [
   {
-    id: "general",
+    id: "基本設定", //general
     icon: CodiconSettings,
   },
   {
-    id: "appearance",
+    id: "外観",
     icon: FluentDarkTheme20Filled,
   },
   {
-    id: "account",
+    id: "アカウント",
     icon: CodiconAccount,
   },
   {
-    id: "info",
+    id: "情報",
     icon: IcOutlineInfo,
   },
 ];
@@ -36,7 +36,7 @@ export const Settings = memo(() => {
 
   return (
     <div className="bg-surface container size-full rounded-xl flex flex-col max-w-3xl gap-4">
-      <h1 className="text-2xl font-semibold pt-2">Settings</h1>
+      <h1 className="text-2xl font-semibold pt-2">設定</h1>
       <nav className="flex gap-1 rounded-full max-w-min bg-surface-container">
         {Tabs.map((tab) => (
           <div key={tab.id} className="relative">

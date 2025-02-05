@@ -62,7 +62,7 @@ const SearchBar = memo(({ className }: SearchBarProps) => {
     <>
       <Input
         variant="flat"
-        placeholder="Search..."
+        placeholder="検索"
         enterKeyHint="search"
         autoComplete="off"
         aria-label="search"

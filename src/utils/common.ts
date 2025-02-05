@@ -193,5 +193,5 @@ export function getCountryCode(): string | null {
     return parts[1] ? parts[1].toUpperCase() : "US";
   }
 
-  return "US";
+  return "JP";
 }

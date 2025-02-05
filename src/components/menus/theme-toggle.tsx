@@ -20,7 +20,7 @@ export function ThemeToggle() {
             className="pointer-events-none absolute size-6 rotate-90 scale-0 transition-all 
             dark:rotate-0 dark:scale-100"
           />
-          <span className="sr-only">Toggle theme</span>
+          <span className="sr-only">テーマ</span>
         </Button>
       </DropdownTrigger>
       <DropdownMenu
@@ -33,13 +33,13 @@ export function ThemeToggle() {
         }}
       >
         <DropdownItem key="light" onPress={() => setTheme("light")}>
-          Light
+          ライト
         </DropdownItem>
         <DropdownItem key="dark" onPress={() => setTheme("dark")}>
-          Dark
+          ダーク
         </DropdownItem>
         <DropdownItem key="system" onPress={() => setTheme("system")}>
-          System
+          システムの既定
         </DropdownItem>
       </DropdownMenu>
     </Dropdown>

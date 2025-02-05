@@ -72,8 +72,8 @@ export const ApperanceTab = memo(() => {
     <div className="flex flex-col gap-3">
       <div className="grid grid-cols-6 gap-2 py-2 w-full">
         <div className="col-span-6 xs:col-span-3">
-          <p className="text-lg font-medium">Color</p>
-          <p className="text-sm font-normal text-on-surface-variant">Change primary Color</p>
+          <p className="text-lg font-medium">カラー</p>
+          <p className="text-sm font-normal text-on-surface-variant">メインカラーを変更</p>
         </div>
         <div className="gap-2 grid grid-cols-[repeat(auto-fill,minmax(32px,1fr))] col-span-6 xs:col-span-3">
           {swatches.map((color) => (

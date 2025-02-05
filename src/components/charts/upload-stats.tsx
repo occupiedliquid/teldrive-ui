@@ -97,7 +97,7 @@ const options: ApexOptions = {
   },
   yaxis: {
     title: {
-      text: "Size (GB)",
+      text: "サイズ (GB)",
       style: {
         cssClass: "font-bold text-small",
       },
@@ -116,7 +116,7 @@ function getChartData(stats: UploadStats[]): ApexOptions {
     },
     series: [
       {
-        name: "Uploaded",
+        name: "アップロード量",
         data,
       },
     ],
@@ -140,7 +140,7 @@ export const UploadStatsChart = memo(({ stats, days, setDays }: UploadStatsChart
         <div className="flex w-full max-w-45 justify-end">
           <Dropdown className="min-w-32" triggerScaleOnOpen={false}>
             <DropdownTrigger>
-              <Button variant="filledTonal">{`${days} Days`}</Button>
+              <Button variant="filledTonal">{`${days} 日間`}</Button>
             </DropdownTrigger>
             <DropdownMenu
               classNames={{
@@ -148,7 +148,7 @@ export const UploadStatsChart = memo(({ stats, days, setDays }: UploadStatsChart
               }}
             >
               {allowedDays.map((day) => (
-                <DropdownItem key={day} onPress={() => setDays(day)}>{`${day} Days`}</DropdownItem>
+                <DropdownItem key={day} onPress={() => setDays(day)}>{`${day} 日間`}</DropdownItem>
               ))}
             </DropdownMenu>
           </Dropdown>
