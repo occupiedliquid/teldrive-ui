@@ -201,9 +201,7 @@ const DeleteDialog = memo(({ handleClose, queryKey }: DeleteDialogProps) => {
       <ModalHeader className="flex flex-col gap-1">ファイルの削除</ModalHeader>
       <ModalBody>
         <h1 className="text-large font-medium mt-2">
-          {`${selectedFiles.length} 個のファイルを削除しますか？${
-            selectedFiles.length > 1 ? "s" : ""
-          } ?`}
+          {`${selectedFiles.length} 個のファイルを削除しますか？`}
         </h1>
       </ModalBody>
       <ModalFooter>
