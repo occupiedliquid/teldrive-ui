@@ -70,7 +70,7 @@ const RenameDialog = memo(({ queryKey, handleClose }: RenameDialogProps) => {
 
   return (
     <>
-      <ModalHeader className="flex flex-col gap-1">Rename</ModalHeader>
+      <ModalHeader className="flex flex-col gap-1">名前の変更</ModalHeader>
       <ModalBody as="form" id="rename-form" onSubmit={onRename}>
         <Input
           size="lg"
@@ -85,7 +85,7 @@ const RenameDialog = memo(({ queryKey, handleClose }: RenameDialogProps) => {
       </ModalBody>
       <ModalFooter>
         <Button className="font-normal" variant="text" onPress={handleClose}>
-          Close
+          閉じる
         </Button>
         <Button
           type="submit"
@@ -95,7 +95,7 @@ const RenameDialog = memo(({ queryKey, handleClose }: RenameDialogProps) => {
           isDisabled={updateFiles.isPending || !currentFile.name}
           isLoading={updateFiles.isPending}
         >
-          Rename
+          変更
         </Button>
       </ModalFooter>
     </>
@@ -142,7 +142,7 @@ const FolderCreateDialog = memo(({ queryKey, handleClose }: FolderCreateDialogPr
 
   return (
     <>
-      <ModalHeader className="flex flex-col gap-1">Create Folder</ModalHeader>
+      <ModalHeader className="flex flex-col gap-1">フォルダの作成</ModalHeader>
       <ModalBody as="form" id="create-folder-form" onSubmit={onCreate}>
         <Input
           size="lg"
@@ -150,7 +150,7 @@ const FolderCreateDialog = memo(({ queryKey, handleClose }: FolderCreateDialogPr
           classNames={{
             inputWrapper: "border-primary border-large",
           }}
-          placeholder="Folder Name or Path"
+          placeholder="フォルダの名前・パス"
           autoFocus
           value={currentFile?.name}
           onValueChange={(value) => actions.setCurrentFile({ ...currentFile, name: value })}
@@ -198,17 +198,17 @@ const DeleteDialog = memo(({ handleClose, queryKey }: DeleteDialogProps) => {
 
   return (
     <>
-      <ModalHeader className="flex flex-col gap-1">Delete Files</ModalHeader>
+      <ModalHeader className="flex flex-col gap-1">ファイルの削除</ModalHeader>
       <ModalBody>
         <h1 className="text-large font-medium mt-2">
-          {`Are you sure to delete ${selectedFiles.length} file${
+          {`${selectedFiles.length} 個のファイルを削除しますか？${
             selectedFiles.length > 1 ? "s" : ""
           } ?`}
         </h1>
       </ModalBody>
       <ModalFooter>
         <Button className="font-normal" variant="text" onPress={handleClose}>
-          No
+          いいえ
         </Button>
         <Button
           variant="filledTonal"
@@ -217,7 +217,7 @@ const DeleteDialog = memo(({ handleClose, queryKey }: DeleteDialogProps) => {
           }}
           onPress={onDelete}
         >
-          Yes
+          はい
         </Button>
       </ModalFooter>
     </>
@@ -316,7 +316,7 @@ const ShareFileDialog = memo(({ handleClose }: ShareFileDialogProps) => {
   return (
     <>
       <ModalHeader className="flex items-center justify-between ">
-        Share Files
+        ファイル共有
         <Button size="sm" variant="text" isIconOnly onPress={handleClose}>
           <IcRoundClose />
         </Button>
@@ -324,8 +324,8 @@ const ShareFileDialog = memo(({ handleClose }: ShareFileDialogProps) => {
       <ModalBody>
         <form className="grid grid-cols-6 gap-8 p-2 w-full overflow-y-auto">
           <div className="col-span-6 xs:col-span-3">
-            <p className="text-lg font-medium">Set expiration date</p>
-            <p className="text-sm font-normal text-on-surface-variant">Link expiration date</p>
+            <p className="text-lg font-medium">期限の設定</p>
+            <p className="text-sm font-normal text-on-surface-variant">リンクの有効期限</p>
           </div>
           <Controller
             name="expirationDate"
@@ -344,8 +344,8 @@ const ShareFileDialog = memo(({ handleClose }: ShareFileDialogProps) => {
             )}
           />
           <div className="col-span-6 xs:col-span-3">
-            <p className="text-lg font-medium">Set link password</p>
-            <p className="text-sm font-normal text-on-surface-variant">Public link password</p>
+            <p className="text-lg font-medium">パスワード</p>
+            <p className="text-sm font-normal text-on-surface-variant">共有リンクのパスワード</p>
           </div>
           <Controller
             name="password"
@@ -376,7 +376,7 @@ const ShareFileDialog = memo(({ handleClose }: ShareFileDialogProps) => {
         </form>
         <Divider />
         <div className="flex justify-between">
-          <h1 className="text-large font-medium mt-2">Sharing {sharingOn ? "On" : "Off"}</h1>
+          <h1 className="text-large font-medium mt-2">共有 {sharingOn ? "オン" : "オフ"}</h1>
           <div className="flex items-center gap-3">
             {data?.protected && <MdiProtectedOutline className="text-primary" />}
 
