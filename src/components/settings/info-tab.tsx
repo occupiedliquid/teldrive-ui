@@ -8,7 +8,7 @@ export const InfoTab = memo(() => {
       <span className="flex flex-col gap-2">
         <p className="text-lg font-medium">UI</p>
         <a
-          href={`https://github.com/tgdrive/teldrive-ui/commits/${import.meta.env.UI_VERSION}`}
+          href={`https://github.com/occupiedliquid/teldrive-ui/commits/${import.meta.env.UI_VERSION}`}
           rel="noopener noreferrer"
           target="_blank"
           className="text-md font-normal"
@@ -25,7 +25,7 @@ export const InfoTab = memo(() => {
               <span className="capitalize">{key}: </span>
               {key === "version" ? (
                 <a
-                  href={`https://github.com/tgdrive/teldrive/commits/${val}`}
+                  href={`https://github.com/occupiedliquid/teldrive/commits/${val}`}
                   rel="noopener noreferrer"
                   target="_blank"
                   className="font-semibold"

@@ -48,7 +48,7 @@ export const CustomActions = {
     id: "share_files",
     requiresSelection: true,
     button: {
-      name: "Share",
+      name: "共有",
       contextMenu: true,
       icon: Share,
     },
@@ -59,7 +59,7 @@ export const CustomActions = {
     requiresSelection: true,
     fileFilter: (file) => !(file && "isDir" in file),
     button: {
-      name: "Copy Link",
+      name: "リンクをコピー",
       contextMenu: true,
       icon: FbIconName.copy,
     },
