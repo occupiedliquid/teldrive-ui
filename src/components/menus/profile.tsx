@@ -51,7 +51,7 @@ export function ProfileDropDown() {
           as={Link}
           //@ts-ignore
           to="/settings/$tabId"
-          params={{ tabId: "general" }}
+          params={{ tabId: "基本設定" }}
           endContent={<IconOutlineSettings className="size-6" />}
         >
           設定

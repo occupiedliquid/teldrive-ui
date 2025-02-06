@@ -8,7 +8,7 @@ import {
   FileList,
   FileNavbar,
   FileToolbar,
-} from "@tw-material/file-browser";
+} from "@teldrive_jp/tw-file-browser";
 import type { StateSnapshot, VirtuosoGridHandle, VirtuosoHandle } from "react-virtuoso";
 import useBreakpoint from "use-breakpoint";
 

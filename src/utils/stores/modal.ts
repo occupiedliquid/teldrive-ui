@@ -1,4 +1,4 @@
-import type { FileData } from "@tw-material/file-browser";
+import type { FileData } from "@teldrive_jp/tw-file-browser";
 import { create } from "zustand";
 
 type ModalState = {

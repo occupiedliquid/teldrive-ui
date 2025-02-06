@@ -1,7 +1,7 @@
 import type React from "react";
 import { memo, useCallback, useEffect, useMemo, useRef } from "react";
 import { useQueryClient } from "@tanstack/react-query";
-import { ColorsLight, FbIcon, useIconData } from "@tw-material/file-browser";
+import { ColorsLight, FbIcon, useIconData } from "@teldrive_jp/tw-file-browser";
 import { Button, Listbox, ListboxItem } from "@tw-material/react";
 import IcOutlineCheckCircle from "~icons/ic/outline-check-circle";
 import IcRoundClose from "~icons/ic/round-close";

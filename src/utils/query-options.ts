@@ -1,6 +1,6 @@
 import type { FileListParams, ShareListParams } from "@/types";
 import { infiniteQueryOptions, queryOptions, useQuery } from "@tanstack/react-query";
-import type { FileData } from "@tw-material/file-browser";
+import type { FileData } from "@teldrive_jp/tw-file-browser";
 
 import { getExtension, mediaUrl } from "./common";
 import { defaultSortState, settings, sortIdsMap, sortViewMap } from "./defaults";

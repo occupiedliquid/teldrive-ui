@@ -9,7 +9,7 @@ import {
   FileHelper,
   type MapFileActionsToData,
   type FileData,
-} from "@tw-material/file-browser";
+} from "@teldrive_jp/tw-file-browser";
 import IconFlatColorIconsVlc from "~icons/flat-color-icons/vlc";
 import IconPotPlayerIcon from "~icons/material-symbols/play-circle-rounded";
 import toast from "react-hot-toast";

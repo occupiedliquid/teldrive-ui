@@ -1,6 +1,6 @@
 import { lazy, memo, Suspense, useCallback, useState } from "react";
 import type { BrowseView, Session } from "@/types";
-import { FbIcon, type FileData, useIconData } from "@tw-material/file-browser";
+import { FbIcon, type FileData, useIconData } from "@teldrive_jp/tw-file-browser";
 import { Button, Modal, ModalContent } from "@tw-material/react";
 import IconIcRoundArrowBack from "~icons/ic/round-arrow-back";
 import IconIcRoundNavigateBefore from "~icons/ic/round-navigate-before";
