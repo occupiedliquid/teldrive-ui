@@ -175,7 +175,7 @@ export const GeneralTab = memo(() => {
       />
       <div className="col-span-6 flex justify-end">
         <Button type="submit" variant="filledTonal">
-          Save
+          保存
         </Button>
       </div>
     </form>

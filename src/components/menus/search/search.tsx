@@ -47,10 +47,10 @@ const searchTypes = ["text", "regex"];
 const locations = ["current", "custom"];
 
 const modifiedDateValues = [
-  { value: "7", label: "Last 7 days" },
-  { value: "30", label: "Last 30 days" },
-  { value: "90", label: "Last 90 days" },
-  { value: "-2", label: "Custom" },
+  { value: "7", label: "7日間" },
+  { value: "30", label: "30日間" },
+  { value: "90", label: "90日間" },
+  { value: "-2", label: "カスタム" },
 ];
 
 interface SearchMenuProps {
